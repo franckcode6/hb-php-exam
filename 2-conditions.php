@@ -28,14 +28,6 @@ $shoes = [
     ],
 ];
 
-echo '<table>
-    <tr>
-        <th></th>
-        <th>Nom</th>
-        <th>Prix (en euros)</th>
-        <th>Nombre en stock</th>
-    </tr>';
-
 foreach ($shoes as $shoe) {
     if ($shoe['price'] > 100) {
         $exclamPoint = "!";
@@ -43,12 +35,5 @@ foreach ($shoes as $shoe) {
         $exclamPoint = ' ';
     }
 
-
-    echo '<tr>
-            <td>'.$exclamPoint.'</td>
-            <td>'.$shoe['name'].'</td>
-            <td>'.number_format($shoe['price'], 2, ',', ' ').'€</td>
-            <td>'.$shoe['stock'].' en stock</td>';
-    '</tr>
-    </table>';
+    echo ''.$exclamPoint.''.$shoe['name'].''.number_format($shoe['price'], 2, ',', ' ').'€</td>'.$shoe['stock'].' en stock </br></br>';
 }
